@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.fdu.sciback.mapper.SciMapper">
+
+<!--    <typeHandlers>-->
+<!--        <typeHandler handler="com.fdu.sciback.tool.JacksonTypeHandler"/>-->
+<!--    </typeHandlers>-->
+
+
+
+    <!--    <resultMap id="userResultMap" type="org.sang.bean.User">-->
+<!--        <result typeHandler="org.sang.db.MyDateTypeHandler" column="regTime" javaType="java.util.Date"-->
+<!--                jdbcType="VARCHAR"-->
+<!--                property="regTime"/>-->
+<!--    </resultMap>-->
+
+    <resultMap id="sciResultMap" type="com.fdu.sciback.entity.SciEntity">
+        <result typeHandler="com.fdu.sciback.tool.JacksonTypeHandler" column="publications" javaType="List"
+                jdbcType="VARCHAR"
+                property="publications"/>
+    </resultMap>
+
+
+
+    <select id="queryAll"  resultMap="sciResultMap">
+        select id as id,name as name ,name_zh as nameZh,level as level,definition as definition,definition_zh as definitionZh, childnodes as childnodes,parent as parent,experts as experts,publications as publications from scikg limit 10
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
