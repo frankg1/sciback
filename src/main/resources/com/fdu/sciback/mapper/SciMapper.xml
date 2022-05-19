@@ -17,9 +17,15 @@
 <!--    </resultMap>-->
 
     <resultMap id="sciResultMap" type="com.fdu.sciback.entity.SciEntity">
-        <result typeHandler="com.fdu.sciback.tool.JacksonTypeHandler" column="publications" javaType="List"
+        <result typeHandler="com.fdu.sciback.tool.JacksonTypeHandler" column="publications"  javaType="List"
                 jdbcType="VARCHAR"
                 property="publications"/>
+        <result typeHandler="com.fdu.sciback.tool.JacksonTypeHandler" column="experts" javaType="List"
+                jdbcType="VARCHAR"
+                property="experts"/>
+        <result typeHandler="com.fdu.sciback.tool.JacksonTypeHandler" column="childnodes" javaType="List"
+                jdbcType="VARCHAR"
+                property="childnodes"/>
     </resultMap>
 
 

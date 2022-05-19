@@ -25,8 +25,8 @@ public class SciEntity {
     private String definition;
     private String definitionZh;
     private String parent;
-    private List<Integer> childnodes;
-    private String experts;//这里需要更改 数据库里存错了。
+    private List<Object> childnodes;
+    private List<Map<String,Object>> experts;//这里需要更改 数据库里存错了。
     private List<Map<String,Object>> publications;
 
 //    public static class DictContent {
@@ -82,19 +82,19 @@ public class SciEntity {
         this.parent = parent;
     }
 
-    public List<Integer> getChildnodes() {
+    public List<Object> getChildnodes() {
         return childnodes;
     }
 
-    public void setChildnodes(List<Integer> childnodes) {
+    public void setChildnodes(List<Object> childnodes) {
         this.childnodes = childnodes;
     }
 
-    public String getExperts() {
+    public List<Map<String,Object>> getExperts() {
         return experts;
     }
 
-    public void setExperts(String experts) {
+    public void setExperts(List<Map<String,Object>> experts) {
         this.experts = experts;
     }
 
